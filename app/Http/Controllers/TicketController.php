@@ -15,7 +15,7 @@ class TicketController extends Controller
      */
     public function index()
     {
-        $tickets = Ticket::with('user','categories')->latest()->paginate(10);
+        $tickets = Ticket::with('user','categories')->latest()->paginate(5);
 
         /**
          * we can pass data to the view using compact method and using an associative array
